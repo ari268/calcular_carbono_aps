@@ -14,27 +14,49 @@
     
         <nav>
             <ul>
-                <li><a href="/">Página Inicial</a></li> <!-- Link para a página inicial -->
-                <li><a href="/como-funciona">Como Funciona</a></li> <!-- Link para a página "Como Funciona" -->
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/como-funciona">Como Funciona</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <form id="form-carbono">
+            <!-- Seletor para o tipo de usuário -->
             <div class="form-group">
-                <label for="energia">Consumo de Energia (kWh):</label>
+                <label for="tipo_usuario">Selecione o Tipo de Usuário:</label>
+                <select id="tipo_usuario" name="tipo_usuario" required>
+                    <option value="individuo">Indivíduo</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="cidade">Cidade</option>
+                </select>
+            </div>
+
+            <!-- Campos comuns para todos os tipos de usuário -->
+            <div class="form-group">
+                <label for="energia">Consumo de Energia (kWh ou MWh):</label>
                 <input type="number" id="energia" name="energia" required>
             </div>
             
-            <div class="form-group">
+            <div id="campo-combustivel" class="form-group">
                 <label for="combustivel">Combustível Consumido (litros):</label>
-                <input type="number" id="combustivel" name="combustivel" required>
+                <input type="number" id="combustivel" name="combustivel">
             </div>
-    
-            <div class="form-group">
+
+            <div id="campo-transporte" class="form-group">
                 <label for="transporte">Distância Percorrida (km):</label>
-                <input type="number" id="transporte" name="transporte" required>
+                <input type="number" id="transporte" name="transporte">
+            </div>
+
+            <!-- Campos adicionais para cidades -->
+            <div id="campo-transporte-publico" class="form-group" style="display: none;">
+                <label for="transporte_publico">Distância de Transporte Público (km):</label>
+                <input type="number" id="transporte_publico" name="transporte_publico">
+            </div>
+
+            <div id="campo-transporte-carro" class="form-group" style="display: none;">
+                <label for="transporte_carro">Distância Percorrida por Veículos Particulares (km):</label>
+                <input type="number" id="transporte_carro" name="transporte_carro">
             </div>
     
             <button type="submit">Calcular Pegada de Carbono</button>
@@ -47,9 +69,11 @@
     </main>
 
     <footer>
+        <p><li><a href="/como-funciona">Como Funciona</a></li></p>
         <p>&copy; 2024 Calculadora de Carbono</p>
     </footer>
 
     <script src="/static/script.js"></script>
 </body>
 </html>
+
