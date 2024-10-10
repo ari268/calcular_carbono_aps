@@ -1,7 +1,6 @@
 Atores :
 Ariane 
-Eduardo
-Rhurtyson
+
 
 diretorio:
 APS UNIP/
