@@ -1,0 +1,129 @@
+/* Estilo Global */
+body { 
+    background-image: url('../img/carbono.jpg');
+    background-size: cover; /* Garante que a imagem cubra o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #2b622d;
+    color: rgb(255, 254, 251);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*/* Estilizando a barra de navegação */
+nav {
+    background-color: #2b622d; /* Cor de fundo da barra de navegação */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: flex-end; /* Alinha os links à direita */
+}
+
+nav ul li {
+    margin-left: 20px; /* Espaço entre os links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #fffcfc; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+nav ul li a:hover {
+    background-color: #245325; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo transparente */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2b622d;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2b622d;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e4220; /* Cor um pouco mais escura ao passar o mouse */
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #2b622d;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #2b622d;
+    color: rgb(236, 234, 234);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
