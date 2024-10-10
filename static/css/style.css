@@ -1,18 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilo Global */
-body { 
-    background-image: url('../img/carbono.jpg');
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Cor de fundo padrão */
+    background-image: url('../img/carbono.jpg'); /* Imagem de fundo */
     background-size: cover; /* Garante que a imagem cubra o espaço */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: space-between;
 }
 
+/* Cabeçalho */
 header {
     background-color: #2b622d;
     color: rgb(255, 254, 251);
@@ -21,7 +31,16 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*/* Estilizando a barra de navegação */
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Estilizando a barra de navegação */
 nav {
     background-color: #2b622d; /* Cor de fundo da barra de navegação */
 }
@@ -52,58 +71,84 @@ nav ul li a:hover {
     color: #fff; /* Cor do texto ao passar o mouse */
 }
 
+/* Estilos principais */
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 800px; /* Ajustado para maior largura */
+}
+
+/* Estilo dos formulários */
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 label {
+    display: block;
     margin-top: 10px;
+    margin-bottom: 5px;
     font-weight: bold;
     color: #2b622d;
 }
 
-input {
+input,
+select {
     margin-bottom: 10px;
     padding: 10px;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1em;
 }
 
-button {
+/* Botão */
+button,
+button[type="submit"] {
     padding: 10px 20px;
     background-color: #2b622d;
-    color: rgb(255, 255, 255);
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+button:hover,
+button[type="submit"]:hover {
     background-color: #1e4220; /* Cor um pouco mais escura ao passar o mouse */
 }
 
+/* Resultado das emissões */
 #resultado {
     margin-top: 20px;
-    font-size: 1.2em;
-    color: #2b622d;
-    font-weight: bold;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    border: 1px solid #c7e7c2;
+    border-radius: 8px;
     text-align: center;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 4px;
     width: 100%;
+}
+
+#resultado h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#resultado p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2b622d;
 }
 
 /* Estilo do Rodapé */
@@ -111,7 +156,7 @@ footer {
     background-color: #2b622d;
     color: rgb(236, 234, 234);
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -120,10 +165,17 @@ footer {
 /* Estilos Responsivos */
 @media (max-width: 768px) {
     main {
+        padding: 15px;
         width: 90%;
     }
 
-    button {
+    header {
+        padding: 15px;
+    }
+
+    button,
+    button[type="submit"] {
         width: 100%;
     }
 }
+
